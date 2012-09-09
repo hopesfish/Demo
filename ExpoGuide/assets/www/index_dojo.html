@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
+        
+        <!-- prevent cache -->
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="pragma" yontent="no-cache">
+        
+        <title>Guide</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js" data-dojo-config="async:true"></script>
+        </script>
+        <script>
+            
+            require(["dojox/mobile/parser", "dojox/mobile/deviceTheme", "dojox/mobile", "dojox/mobile/ScrollableView", "dojox/mobile/TabBar", "dojox/mobile/compat"], 
+                function(parser) {
+                    parser.parse();
+                }
+            );
+            
+        </script>
+    </head>
+    <body>
+        <div id="activity" data-dojo-type="dojox.mobile.View" data-dojo-props="selected: true">
+            <h1 data-dojo-type="dojox.mobile.Heading">
+                <ul id="headingTabBar" data-dojo-type="dojox.mobile.TabBar" barType="segmentedControl">
+                    <li id="tbNewBtn" data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props="selected: true, moveTo: 'exhibition'">展览</li>
+                    <li id="tbHotBtn" data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props="moveTo: 'lecture'">讲座</li>
+                </ul>
+            </h1>
+            <div id="exhibition" data-dojo-type="dojox.mobile.ScrollableView" data-dojo-props="selected: true">
+                <div data-dojo-type="dojox.mobile.RoundRect" >
+                    <strong>从“功能城市”走向“文化城市”</strong>
+                    <div><span style="font-size:12px;">处于世界变革中的博物馆：新挑战、新启示&nbsp;5月18日  9:00—11:00</span></div>
+                </div>
+                <div data-dojo-type="dojox.mobile.RoundRect">
+                    <strong>从“功能城市”走向“文化城市”</strong><span style="float:right">5月18日  9:00—11:00</span>
+                    <div>处于世界变革中的博物馆：新挑战、新启示</div>
+                </div>
+            </div>
+            <div id="lecture" data-dojo-type="dojox.mobile.ScrollableView">
+                <div data-dojo-type="dojox.mobile.RoundRect" >
+                    <strong>111从“功能城市”走向“文化城市”</strong><span style="float:right">5月18日  9:00—11:00</span>
+                    <div>处于世界变革中的博物馆：新挑战、新启示</div>
+                </div>
+                <div data-dojo-type="dojox.mobile.RoundRect">
+                    <strong>222从“功能城市”走向“文化城市”</strong><span style="float:right">5月18日  9:00—11:00</span>
+                    <div>处于世界变革中的博物馆：新挑战、新启示</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mentions" data-dojo-type="dojox.mobile.ScrollableView">
+            <h1 data-dojo-type="dojox.mobile.Heading">
+                <!-- the refresh button -->
+                <div data-dojo-type="dojox.mobile.ToolBarButton" data-dojo-props="icon: 'images/refresh.png'" class="mblDomButton tweetviewRefresh" style="float:right;"></div>
+                <span>我的展览</span>
+            </h1>
+            <ul data-dojo-type="dojox.mobile.RoundRectList">
+
+                <li data-dojo-type="dojox.mobile.ListItem">
+                    Mention tweet item here
+                </li>
+            </ul>
+        </div>
+        
+        <!-- settings view -->
+        <div id="settings" data-dojo-type="dojox.mobile.ScrollableView">
+            <h1 data-dojo-type="dojox.mobile.Heading"><span>设置</span></h1>
+
+            <h2 data-dojo-type="dojox.mobile.RoundRectCategory">Show</h2>
+            <ul data-dojo-type="dojox.mobile.RoundRectList">
+                <li data-dojo-type="dojox.mobile.ListItem">
+                    Setting item here
+                </li>
+            </ul>
+        </div>
+        
+        <!-- the bottom tabbar -->
+        <ul data-dojo-type="dojox.mobile.TabBar" data-dojo-props="iconBase: 'images/iconStrip.png'" style="margin-top:-49px;">
+            <!-- top left width height -->
+            <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props="iconPos1: '0,0,29,30', iconPos2: '29,0,29,30', selected: true, moveTo: 'activity'">最新活动</li>
+            <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props="iconPos1: '0,29,29,30', iconPos2: '29,29,29,30', moveTo: 'mentions'">我的展览</li>
+            <li data-dojo-type="dojox.mobile.TabBarButton" data-dojo-props="iconPos1: '0,58,29,30', iconPos: '29,58,29,30', moveTo:'settings'">设置</li>
+        </ul>
+    </body>
+</html>

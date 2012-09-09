@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>51expo</title>
+	<atom:link href="http://hopesfish.sinaapp.com/?feed=rss2" rel="self" type="application/rss+xml" />
+	<link>http://hopesfish.sinaapp.com</link>
+	<description>又一个 WordPress 站点</description>
+	<lastBuildDate>Thu, 21 Jun 2012 03:01:00 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.2.1</generator>
+		<item>
+		<title>欧洲历史图片展览</title>
+		<link>http://hopesfish.sinaapp.com/?p=14</link>
+		<comments>http://hopesfish.sinaapp.com/?p=14#comments</comments>
+		<pubDate>Wed, 20 Jun 2012 14:26:55 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[往期展览]]></category>
+
+		<guid isPermaLink="false">http://hopesfish.sinaapp.com/?p=14</guid>
+		<description><![CDATA[讲座地点：中国国家博物馆学术报告厅 讲座时间：2011年5月10日 9:30——11:30]]></description>
+			<content:encoded><![CDATA[<ul>
+<li>讲座地点：中国国家博物馆学术报告厅</li>
+<li>讲座时间：2011年5月10日 9:30——11:30</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://hopesfish.sinaapp.com/?feed=rss2&#038;p=14</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>说出土文物的性别特征</title>
+		<link>http://hopesfish.sinaapp.com/?p=8</link>
+		<comments>http://hopesfish.sinaapp.com/?p=8#comments</comments>
+		<pubDate>Wed, 20 Jun 2012 13:37:51 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+				<category><![CDATA[展览预告]]></category>
+
+		<guid isPermaLink="false">http://1.hopesfish.sinaapp.com/?p=8</guid>
+		<description><![CDATA[讲座地点：中国国家博物馆学术报告厅 讲座时间：2011年5月10日 9:30——11:30]]></description>
+			<content:encoded><![CDATA[<ul>
+<li>讲座地点：中国国家博物馆学术报告厅</li>
+<li>讲座时间：2011年5月10日 9:30——11:30</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://hopesfish.sinaapp.com/?feed=rss2&#038;p=8</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

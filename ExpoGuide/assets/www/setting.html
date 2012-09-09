@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>展览导航1.0 - 收藏</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="./jquery.mobile-1.1.0/jquery.mobile-1.1.0.css" />
+    <script src="./jquery-1.7.1/jquery-1.7.1.min.js"></script>
+    <script src="./jquery.mobile-1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./cordova-1.8.1/cordova-1.8.1.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            var DEBUG = true;
+        });
+    </script>
+</head> 
+<body> 
+
+<div data-role="page" data-title="Guide for Expo!">
+    <div id="container" data-role="content">
+    </div>
+
+    <div data-role="footer" data-id="expo-navbar" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="index.html" data-icon="info">全部展览</a></li>
+                <li><a href="favorite.html" data-icon="star">我的收藏</a></li>
+                <li><a href="setting.html" data-icon="grid" class="ui-btn-active ui-state-persist">软件设置</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
