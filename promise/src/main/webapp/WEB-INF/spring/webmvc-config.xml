@@ -6,8 +6,8 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <!-- The controllers are autodetected POJOs labeled with the @Controller annotation. -->
-    <context:component-scan base-package="demo.promise" use-default-filters="false">
-        <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
-    </context:component-scan>
+    <context:component-scan base-package="demo.promise" />
+ 
+    <mvc:annotation-driven />
+    
 </beans>
