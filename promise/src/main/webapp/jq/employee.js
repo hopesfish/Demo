@@ -9,6 +9,7 @@ var Employee = function() {
     var data = arguments[0] || {};
     $.extend(this, data);
 };
+
 Employee.all = function(opt) {
     var opt = opt || {local: true}, dfd = $.Deferred();
     if (opt.local === true) {
