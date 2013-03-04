@@ -1,7 +1,6 @@
 var db = openDatabase('example', '1.0', 'Employee', 2 * 1024 * 1024);
 db.transaction(function (tx) {
-    tx.executeSql('DROP TABLE EMPLOYEE');
-    tx.executeSql('CREATE TABLE EMPLOYEE (id unique, name, age, onboard )');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS EMPLOYEE (id unique, name, age, onboard )');
     tx.executeSql('DELETE FROM EMPLOYEE');
 });
 
@@ -70,4 +69,5 @@ Employee.prototype.create = function(opt) {
     } else {
         throw new Error('not implemented!');
     }
+    return dfd;
 };
