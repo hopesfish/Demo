@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>employee example on jQuery</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="./employee.js"></script>
+</head>
+
+<body>
+<script>
+$(document).ready(function() {
+    Employee.all({local: false}).then(function(employees) {
+        $(employees).each(function(idx, employee) {
+            if (employee.age >= 30 ) {
+                Employee.get(employee.id, {local: false}).then(function(employee) {
+                    employee.create({local: true});
+                }, function(err) {
+                    console.info('failed to retrieve the employee\'s detail from the server');
+                });
+            } else {
+                employee.create({local: true});
+            }
+        });
+    }, function(err) {
+        console.info('failed to retrieve all the employee\'s info from the server.');
+    });
+});
+</script>
+</body>
+</html>
