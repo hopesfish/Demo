@@ -9,26 +9,27 @@
 <body>
 <script>
 $(document).ready(function() {
-	var asyncTask = function(idx) {
-		var dfd = $.Deferred();
-		setTimeout(function() {
-			var result = parseInt(Math.random() * 100, 10) % 2;
-			if (result == 0) {
-				dfd.resolve("jQuery " + idx + ":" + "got an even number");
-			} else {
-				dfd.reject("jQuery " + idx + ":" + "failed to get an even number");
-			}
-		}, 2000);
-		return dfd;
-	}
-	
-	function printResult (result) {
-		console.info(result);
-	}
+    var asyncTask = function(idx) {
+        var dfd = $.Deferred();
+        setTimeout(function() {
+            var result = parseInt(Math.random() * 100, 10) % 2,
+                time = (new Date()).getTime();;
+            if (result == 0) {
+                dfd.resolve("jQuery " + time + " " + idx + ":" + "got an even number");
+            } else {
+                dfd.reject("jQuery " + time + " " + idx + ":" + "failed to get an even number");
+            }
+        }, 2000);
+        return dfd;
+    }
+    
+    function printResult (result) {
+        console.info(result);
+    }
 
-	for (var i=0; i<10; i++) {
-		asyncTask(i).then(printResult, printResult);
-	}
+    for (var i=0; i<5; i++) {
+        asyncTask(i).then(printResult, printResult);
+    }
 });
 </script>
 </body>

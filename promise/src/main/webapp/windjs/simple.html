@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>simple example on Wind.js</title>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-core.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-compiler.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-builderbase.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-async.js"></script>
+</head>
+
+<body>
+<script>
+var asyncTask = eval(Wind.compile("async", function (idx) {
+    for (var i=0; i<5; i++) {
+        $await(Wind.Async.sleep(2000));
+        var result = parseInt(Math.random() * 100, 10) % 2,
+            time = (new Date()).getTime();
+        if (result == 0) {
+            console.info("Wind.js " + time + " " + i + ":" + "got an even number");
+        } else {
+            console.info("Wind.js " + time + " " + i + ":" + "got an odd number");
+        }
+    }
+}));
+asyncTask().start();
+</script>
+</body>
+</html>
