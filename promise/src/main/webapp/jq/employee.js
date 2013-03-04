@@ -59,10 +59,8 @@ Employee.prototype.create = function(opt) {
             '"' + this.age + '",' +
             '"' + this.onboard  + '"' +
         ")";
-        console.info(sql);
         db.transaction(function (tx) {
             tx.executeSql(sql, [], function(tx, data) {
-                console.info('done');
                 dfd.resolve();
             }, function(err) {
                 dfd.reject(err);
