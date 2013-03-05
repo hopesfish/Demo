@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>employee example by Wind.js</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-core.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-compiler.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-builderbase.js"></script>
+  <script src="https://raw.github.com/JeffreyZhao/wind/master/src/wind-async.js"></script>
+  <script src="./employee.js"></script>
+</head>
+
+<body>
+<script>
+$(document).ready(function() {
+    var employeeTask = eval(Wind.compile("async", function (idx) {
+        try {
+            var employees = $await(Employee.all({local: false}));
+            for (var i=0; i<employees.length; i++) {
+                var employee = employees[i];
+                if (employee.age >= 30 ) {
+                    var employeeWithDetail = 
+                        $await(Employee.get(employee.id, {local: false}));
+                    $await(employeeWithDetail.create({local: true}));
+                } else {
+                    $await(employee.create({local: true}));
+                }
+            }
+        } catch(err) {
+            console.error(err);
+        }
+        
+    }));
+    employeeTask().start();
+});
+</script>
+</body>
+</html>

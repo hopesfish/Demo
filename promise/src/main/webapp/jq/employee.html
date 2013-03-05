@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>employee example on jQuery</title>
+  <title>employee example by jQuery</title>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="./employee.js"></script>
 </head>
@@ -16,14 +16,14 @@ $(document).ready(function() {
                 Employee.get(employee.id, {local: false}).then(function(employee) {
                     employee.create({local: true});
                 }, function(err) {
-                    console.info('failed to retrieve the employee\'s detail from the server');
+                    console.error('failed to retrieve the employee\'s detail from the server');
                 });
             } else {
                 employee.create({local: true});
             }
         });
     }, function(err) {
-        console.info('failed to retrieve all the employee\'s info from the server.');
+        console.error('failed to retrieve all the employee\'s info from the server.');
     });
 });
 </script>
