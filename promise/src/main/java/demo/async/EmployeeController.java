@@ -1,4 +1,4 @@
-package demo.promise;
+package demo.async;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import demo.promise.Employee;
+import demo.async.Employee;
 
 @Controller
 public class EmployeeController {

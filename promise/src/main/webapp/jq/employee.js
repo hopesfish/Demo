@@ -15,7 +15,7 @@ Employee.all = function(opt) {
         throw new Error('not implemented!');
     } else {
         $.ajax({
-            url: "/promise/api/employee",
+            url: "/async/api/employee",
             dataType: "json"
         }).then(function(items) {
             var employees = [];
@@ -36,7 +36,7 @@ Employee.get = function(id, opt) {
         throw new Error('not implemented!');
     } else {
         $.ajax({
-            url: "/promise/api/employee/" + id,
+            url: "/async/api/employee/" + id,
             dataType: "json"
         }).then(function(employee) {
             dfd.resolve(new Employee(employee));

@@ -1,4 +1,4 @@
-package demo.promise;
+package demo.async;
 
 public class Employee {
 	public Employee(String id, String name, Integer age, Long onboard) {

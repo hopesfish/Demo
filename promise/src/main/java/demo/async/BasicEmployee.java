@@ -1,4 +1,4 @@
-package demo.promise;
+package demo.async;
 
 public class BasicEmployee {
 	public BasicEmployee(Employee employee) {

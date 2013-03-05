@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>demo</groupId>
-	<artifactId>promise</artifactId>
+	<artifactId>async</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>promise</name>
+	<name>async</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

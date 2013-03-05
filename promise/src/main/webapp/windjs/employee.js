@@ -16,7 +16,7 @@ Employee.all = function(opt) {
     } else {
         return Task.create(function(t) {
             $.ajax({
-                url: "/promise/api/employee",
+                url: "/async/api/employee",
                 dataType: "json"
             }).then(function(items) {
                 var employees = [];
@@ -38,7 +38,7 @@ Employee.get = function(id, opt) {
     } else {
         return Task.create(function(t) {
             $.ajax({
-                url: "/promise/api/employee/" + id,
+                url: "/async/api/employee/" + id,
                 dataType: "json"
             }).then(function(employee) {
                 t.complete("success", new Employee(employee));
