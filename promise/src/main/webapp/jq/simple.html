@@ -13,11 +13,12 @@ $(document).ready(function() {
         var dfd = $.Deferred();
         setTimeout(function() {
             var result = parseInt(Math.random() * 100, 10) % 2,
-                time = (new Date()).getTime();;
+                time = (new Date()).getTime(),
+                prefix = "jQuery " + time + " " + idx + ":";
             if (result == 0) {
-                dfd.resolve("jQuery " + time + " " + idx + ":" + "got an even number");
+                dfd.resolve(prefix + "got an even number");
             } else {
-                dfd.reject("jQuery " + time + " " + idx + ":" + "failed to get an even number");
+                dfd.reject(prefix + "failed to get an even number");
             }
         }, 2000);
         return dfd;

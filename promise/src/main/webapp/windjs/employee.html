@@ -19,7 +19,7 @@ $(document).ready(function() {
             var employees = $await(Employee.all({local: false}));
             for (var i=0; i<employees.length; i++) {
                 var employee = employees[i];
-                if (employee.age >= 30 ) {
+                if (employee.age >= 30) {
                     var employeeWithDetail = 
                         $await(Employee.get(employee.id, {local: false}));
                     $await(employeeWithDetail.create({local: true}));

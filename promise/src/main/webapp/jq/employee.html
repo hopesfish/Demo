@@ -5,25 +5,29 @@
   <title>Employee example by jQuery</title>
   <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
   <script src="./employee.js"></script>
-</head>
+</head>,
 
 <body>
 <script>
 $(document).ready(function() {
+    var msg;
     Employee.all({local: false}).then(function(employees) {
         $(employees).each(function(idx, employee) {
-            if (employee.age >= 30 ) {
-                Employee.get(employee.id, {local: false}).then(function(employee) {
+            if (employee.age >= 30) {
+                Employee.get(employee.id, {local: false}).
+                then(function(employee) {
                     employee.create({local: true});
                 }, function(err) {
-                    console.error('failed to retrieve the employee\'s detail from the server');
+                    msg = 'failed to retrieve the detail info from the server';
+                    console.error(msg);
                 });
             } else {
                 employee.create({local: true});
             }
         });
     }, function(err) {
-        console.error('failed to retrieve all the employee\'s info from the server.');
+        msg = 'failed to retrieve all employee\'s info from the server.';
+        console.error(msg);
     });
 });
 </script>

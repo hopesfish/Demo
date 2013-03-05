@@ -11,11 +11,12 @@
 Deferred.define();
 loop(5, function (i) {
     var result = parseInt(Math.random() * 100, 10) % 2,
-        time = (new Date()).getTime();
+        time = (new Date()).getTime(),
+        prefix = "JSDeferred " + time + " " + i + ":";
     if (result == 0) {
-        console.info("JSDeferred " + time + " " + i + ":" + "got an even number");
+        console.info(prefix + "got an even number");
     } else {
-        console.info("JSDeferred " + time + " " + i + ":" + "got an odd number");
+        console.info(prefix + "got an odd number");
     }
     return wait(2);
 });
