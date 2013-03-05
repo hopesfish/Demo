@@ -10,7 +10,7 @@ var Employee = function() {
 };
 
 Employee.all = function(opt) {
-    var opt = opt || {local: true}, Task = Wind.Async.Task;;
+    var opt = opt || {local: true}, Task = Wind.Async.Task;
     if (opt.local === true) {
         throw new Error('not implemented!');
     } else {
@@ -32,7 +32,7 @@ Employee.all = function(opt) {
 };
 
 Employee.get = function(id, opt) {
-    var opt = opt || {local: true}, Task = Wind.Async.Task;;
+    var opt = opt || {local: true}, Task = Wind.Async.Task;
     if (opt.local === true) {
         throw new Error('not implemented!');
     } else {
@@ -50,7 +50,7 @@ Employee.get = function(id, opt) {
 };
 
 Employee.prototype.create = function(opt) {
-    var opt = opt || {local: true}, Task = Wind.Async.Task;;
+    var opt = opt || {local: true}, Task = Wind.Async.Task;
     if (opt.local === true) {
         this.onboard = this.onboard || '';
         var sql = "INSERT INTO EMPLOYEE" + 

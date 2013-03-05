@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Employee example by JSDeferred</title>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+  <script src="https://raw.github.com/cho45/jsdeferred/master/jsdeferred.js"></script>
+  <script src="./employee.js"></script>
+</head>
+
+<body>
+<script>
+$(document).ready(function() {
+    Deferred.define();
+
+    next(function () {
+        return Employee.all({local: false});
+    }).
+    next(function (employees) {
+        return loop(employees.length, function(i) {
+            var employee = employees[i];
+            if (employee.age >= 30) {
+                return Employee.get(employee.id, {local: false})
+                       .next(function(employeeWithDetail) {
+                           return employeeWithDetail.create({local: true});
+                       });
+            } else {
+                return employee.create({local: true});
+            }
+        })
+    }).
+    error(function(err) {
+        console.error(err);
+    })
+});
+</script>
+</body>
+</html>
